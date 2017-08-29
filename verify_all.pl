@@ -141,6 +141,15 @@ while (<ERR>) {
 	foreach $item (@del_indexes) { splice (@commandlist, $item, 1); }
 }
 close ERR;
+open IGNORE, "verify_all.ignore.txt";
+while (<IGNORE>) {
+	next if /^\s/;
+	chop;
+	my $prev = $_;
+	my @del_indexes = reverse(grep { $commandlist[$_] eq $prev } 0..$#commandlist);
+	foreach $item (@del_indexes) { splice (@commandlist, $item, 1); }
+}
+close IGNORE;
 
 
 @commandlistrandom = shuffle(@commandlist);
