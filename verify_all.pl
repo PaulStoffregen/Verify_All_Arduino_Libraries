@@ -3,6 +3,7 @@
 use List::Util 'shuffle';
 
 $dir = '/home/paul/teensy/arduino-1.8.4';
+$sketchbook = '/home/paul/teensy/sketch';
 
 $n = 0;
 $list[$n++] = 'Teensy 3.2 / 3.1';
@@ -22,6 +23,19 @@ while (<F>) {
 	chop;
 	$examples[$examples_count++] = $_;
 }
+close F;
+open F, "find $dir/examples -name '*.ino' -o -name '*.pde' |";
+while (<F>) {
+	chop;
+	$examples[$examples_count++] = $_;
+}
+close F;
+open F, "find $sketchbook/libraries -name '*.ino' -o -name '*.pde' |";
+while (<F>) {
+	chop;
+	$examples[$examples_count++] = $_;
+}
+close F;
 print "Testing $examples_count examples\n";
 
 
@@ -142,8 +156,10 @@ print "Commands to run:  ", @commandlistrandom + 0, "\n";
 foreach $cmd (@commandlistrandom) {
 	#print "$cmd\n";
 
-	$cmd =~ / $dir\/hardware\/teensy\/avr\/libraries\//;
-	my $file = $';
+	my $file;
+	$file = $' if $cmd =~ / $dir\/hardware\/teensy\/avr\/libraries\//;
+	$file = $' if $cmd =~ / $dir\/examples\//;
+	$file = $' if $cmd =~ / $sketchbook\/libraries\//;
 	$cmd =~ /--board teensy:avr:([a-zA-Z0-9]+)/;
 	my $board = $1;
 
@@ -157,7 +173,7 @@ foreach $cmd (@commandlistrandom) {
 	if ($pid == 0) {
 		close(READER) ;
 		open(STDERR,">&", WRITER) or die "Cannot duplicate STDERR";
-		open(STDOUT,">&", WRITER) or die "cannot duplicate STDOUT";
+		open(STDOUT,">&", WRITER) or die "Cannot duplicate STDOUT";
 		exec($cmd) or exit(1);
 	}
 	close(WRITER);
