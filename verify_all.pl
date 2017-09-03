@@ -124,6 +124,7 @@ print "Commands created: ", @commandlist + 0, "\n";
 
 # read all previously run commands, to avoid duplication of effort
 open OKAY, "verify_all.okay.txt";
+my @del_indexes = undef;
 while (<OKAY>) {
 	next if /^\s/;
 	chop;
@@ -160,6 +161,29 @@ while (<IGNORE>) {
 }
 close IGNORE;
 
+open INCOMPATIBLE, "verify_all.incompatible";
+while (<INCOMPATIBLE>) {
+	chop;
+	next if /^\#/;
+	my @pattern = split;
+	my $num = @pattern + 0;
+	next unless $num > 0;
+	#print "incompatible pattern with $num elements: $_\n";
+	my @del_indexes = undef;
+	for ($i=0; $i < @commandlist; $i++) {
+		my $count = 0;
+		foreach $str (@pattern) {
+			$count++ if index($commandlist[$i], $str) >= 0;
+		}
+		push(@del_indexes, $i) if $count == $num;
+		#print "  match: $commandlist[$i]\n" if $count == $num;
+	}
+	if (@del_indexes > 0) {
+		@del_indexes = reverse(@del_indexes);
+		foreach $item (@del_indexes) { splice (@commandlist, $item, 1); }
+	}
+}
+close INCOMPATIBLE;
 
 @commandlistrandom = shuffle(@commandlist);
 
