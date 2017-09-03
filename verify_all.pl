@@ -21,18 +21,27 @@ open F, "find $dir/hardware/teensy/avr/libraries -name '*.ino' -o -name '*.pde' 
 $examples_count = 0;
 while (<F>) {
 	chop;
+	next unless /([^\/]+)\/([^\/]+)\.(ino|pde)$/;
+	next unless $1 eq $2;  # only build main sketch, not other files
+	next if ($3 eq 'pde') && /\/Processing\//; # ignore Processing code
 	$examples[$examples_count++] = $_;
 }
 close F;
 open F, "find $dir/examples -name '*.ino' -o -name '*.pde' |";
 while (<F>) {
 	chop;
+	next unless /([^\/]+)\/([^\/]+)\.(ino|pde)$/;
+	next unless $1 eq $2;  # only build main sketch, not other files
+	next if ($3 eq 'pde') && /\/Processing\//; # ignore Processing code
 	$examples[$examples_count++] = $_;
 }
 close F;
 open F, "find $sketchbook/libraries -name '*.ino' -o -name '*.pde' |";
 while (<F>) {
 	chop;
+	next unless /([^\/]+)\/([^\/]+)\.(ino|pde)$/;
+	next unless $1 eq $2;  # only build main sketch, not other files
+	next if ($3 eq 'pde') && /\/Processing\//; # ignore Processing code
 	$examples[$examples_count++] = $_;
 }
 close F;
