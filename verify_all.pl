@@ -2,10 +2,17 @@
 
 use List::Util 'shuffle';
 
-$dir = '/home/paul/teensy/arduino-1.8.4';
+$dir = '/home/paul/teensy/arduino-1.8.18';
+#$dir = '/home/paul/teensy/arduino-1.8.16';
+#$dir = '/home/paul/teensy/arduino-1.8.15';
+#$dir = '/home/paul/teensy/arduino-1.8.13';
+#$dir = '/home/paul/teensy/arduino-1.8.9';
 $sketchbook = '/home/paul/teensy/sketch';
 
 $n = 0;
+$list[$n++] = 'Teensy 4.1';
+$list[$n++] = 'Teensy MicroMod';
+$list[$n++] = 'Teensy 4.0';
 $list[$n++] = 'Teensy 3.2 / 3.1';
 $list[$n++] = 'Teensy LC';
 $list[$n++] = 'Teensy 3.5';
@@ -36,7 +43,7 @@ while (<F>) {
 	$examples[$examples_count++] = $_;
 }
 close F;
-open F, "find $sketchbook/libraries -name '*.ino' -o -name '*.pde' |";
+#open F, "find $sketchbook/libraries -name '*.ino' -o -name '*.pde' |";
 while (<F>) {
 	chop;
 	next unless /([^\/]+)\/([^\/]+)\.(ino|pde)$/;
@@ -196,7 +203,7 @@ print "Commands to run:  ", @commandlistrandom + 0, "\n";
 #}
 
 foreach $cmd (@commandlistrandom) {
-	#print "$cmd\n";
+	print "$cmd\n";
 
 	my $file;
 	$file = $' if $cmd =~ / $dir\/hardware\/teensy\/avr\/libraries\//;
@@ -224,6 +231,7 @@ foreach $cmd (@commandlistrandom) {
 	$errors = $warnings = 0;
 	$text = '';
 	while (<READER>) {
+		last if /java.io.IOException: Stream closed/;
 		$errors++ if / error: /;
 		$warnings++ if / warning: /;
 		if ($errors || $warnings) {
