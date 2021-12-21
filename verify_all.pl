@@ -2,7 +2,8 @@
 
 use List::Util 'shuffle';
 
-$dir = '/home/paul/teensy/arduino-1.8.18';
+$dir = '/home/paul/teensy/arduino-1.8.19';
+#$dir = '/home/paul/teensy/arduino-1.8.18';
 #$dir = '/home/paul/teensy/arduino-1.8.16';
 #$dir = '/home/paul/teensy/arduino-1.8.15';
 #$dir = '/home/paul/teensy/arduino-1.8.13';
