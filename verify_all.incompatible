@@ -10,19 +10,19 @@ teensy:avr:teensy41  FastLED/examples/Multiple/ParallelOutputDemo/
 teensy:avr:teensyMM  FastLED/examples/Multiple/ParallelOutputDemo/
 teensy:avr:teensyLC  FastLED/examples/Multiple/ParallelOutputDemo/
 teensy:avr:teensypp2 IRremote/examples/IRDispatcherDemo/
-LowPower/examples/powerDownWakeExternalInterrupt/powerDownWakeExternalInterrupt.pde
-LowPower/examples/powerDownWakePeriodic/powerDownWakePeriodic.pde
-openGLCD/build/debug/testsketches/regression/regression.pde
-openGLCD/build/debug/testsketches/BillsTest1/BillsTest1.pde
+LowPower/examples/powerDownWakeExternalInterrupt/powerDownWakeExternalInterrupt.ino
+LowPower/examples/powerDownWakePeriodic/powerDownWakePeriodic.ino
+openGLCD/build/debug/testsketches/regression/regression.ino
+openGLCD/build/debug/testsketches/BillsTest1/BillsTest1.ino
 OSC/examples/UDPSendBundlewithTimeTag/UDPSendBundlewithTimeTag.ino
 OSC/examples/UDPEcho/UDPEcho.ino
 OSC/examples/UDPOscuino/UDPOscuino.ino
 OSC/examples/SerialOscuinowithBundles/SerialOscuinowithBundles.ino
 OSC/examples/SerialOscuinowithMessages/SerialOscuinowithMessages.ino
-RadioHead/examples/nrf51/nrf51_client/nrf51_client.pde
-RadioHead/examples/nrf51/nrf51_reliable_datagram_client/nrf51_reliable_datagram_client.pde
-RadioHead/examples/nrf51/nrf51_server/nrf51_server.pde
-RadioHead/examples/nrf51/nrf51_reliable_datagram_server/nrf51_reliable_datagram_server.pde
+RadioHead/examples/nrf51/nrf51_client/nrf51_client.ino
+RadioHead/examples/nrf51/nrf51_reliable_datagram_client/nrf51_reliable_datagram_client.ino
+RadioHead/examples/nrf51/nrf51_server/nrf51_server.ino
+RadioHead/examples/nrf51/nrf51_reliable_datagram_server/nrf51_reliable_datagram_server.ino
 RadioHead/examples/simulator/
 RA8875/examples/_UNO/fillScreen_vs_clearScreen/fillScreen_vs_clearScreen.ino
 RA8875/examples/_Teensy3/_Audio_Board/fft_example/fft_example.ino
@@ -30,20 +30,25 @@ RA8875/examples/_Teensy3/test_Initialization/test_Initialization.ino
 RA8875/examples/_Teensy3/_Audio_Board/fft_example2/fft_example2.ino
 TFT_ILI9163C/examples/solid3D/solid3D.ino
 TFT_ILI9163C/examples/bigPicture/bigPicture.ino
-UTFT/examples/Arduino_AVR/UTFT_Bitmap_128x128/UTFT_Bitmap_128x128.pde
-UTFT/examples/Arduino_AVR/UTFT_Bitmap/UTFT_Bitmap.pde
-UTFT/examples/Arduino_AVR/UTFT_Rotate_Bitmap/UTFT_Rotate_Bitmap.pde
+UTFT/examples/Arduino_AVR/UTFT_Bitmap_128x128/UTFT_Bitmap_128x128.ino
+UTFT/examples/Arduino_AVR/UTFT_Bitmap/UTFT_Bitmap.ino
+UTFT/examples/Arduino_AVR/UTFT_Rotate_Bitmap/UTFT_Rotate_Bitmap.ino
 SdFat/examples/examplesV1/
 SdFat/examples/UserChipSelectFunction/UserChipSelectFunction.ino
 IRremote/examples/IRremoteExtensionTest/
-RadioHead/examples/abz/abz_server/abz_server.pde
-RadioHead/examples/abz/abz_client/abz_client.pde
+RadioHead/examples/abz/abz_server/abz_server.ino
+RadioHead/examples/abz/abz_client/abz_client.ino
 teensy:avr:teensyLC  OctoWS2811/examples/BasicTest_FastLED/BasicTest_FastLED.ino
 teensy:avr:teensy40   Adafruit_nRF8001/examples/
 teensy:avr:teensy41   Adafruit_nRF8001/examples/
 teensy:avr:teensyMM   Adafruit_nRF8001/examples/
 teensy:avr:teensy30   Audio/examples/HardwareTesting/PassThroughQuad/PassThroughQuad.ino
 teensy:avr:teensyLC   Audio/examples/HardwareTesting/PassThroughQuad/PassThroughQuad.ino
+RadioHead/examples/nrf24/nrf24_encrypted_server/nrf24_encrypted_server.ino
+teensy:avr:teensyLC   ADC/examples/
+teensy:avr:teensypp2  LowPower/examples/powerDownWakeExternalInterrupt/powerDownWakeExternalInterrupt.ino
+teensy:avr:teensypp2  SdFat/examples/BackwardCompatibility/BackwardCompatibility.ino
+
 
 # IRremote library needs more porting work
 IRremote/examples/IRremoteInfo/IRremoteInfo.ino
@@ -59,9 +64,9 @@ teensy:avr:teensyMM   Adafruit_VS1053/examples/
 teensy:avr:teensy40   DmxSimple/examples/
 teensy:avr:teensy41   DmxSimple/examples/
 teensy:avr:teensyMM   DmxSimple/examples/
-teensy:avr:teensy40   Encoder/examples/SpeedTest/SpeedTest.pde
-teensy:avr:teensy41   Encoder/examples/SpeedTest/SpeedTest.pde
-teensy:avr:teensyMM   Encoder/examples/SpeedTest/SpeedTest.pde
+teensy:avr:teensy40   Encoder/examples/SpeedTest/SpeedTest.ino
+teensy:avr:teensy41   Encoder/examples/SpeedTest/SpeedTest.ino
+teensy:avr:teensyMM   Encoder/examples/SpeedTest/SpeedTest.ino
 
 # Teensy 2 lacks analogWriteFrequency
 teensy:avr:teensy2    FreqCount/examples/Serial_Output_T4/Serial_Output_T4.ino
@@ -97,6 +102,7 @@ teensy:avr:teensyMM   Snooze/examples/hibernate/button_hold_wakeup/button_hold_w
 teensy:avr:teensyMM   Snooze/examples/reduced_cpu_block/simple/simple.ino
 teensy:avr:teensyMM   Snooze/examples/hibernate/sd_datalogger/sd_datalogger.ino
 teensy:avr:teensyMM   Snooze/examples/sleep/SnoozeSleepPWM/SnoozeSleepPWM.ino
+teensy:avr:teensy41   Snooze/examples/sleep/SnoozeSleepPWM/SnoozeSleepPWM.ino
 teensy:avr:teensyMM   Snooze/examples/reduced_cpu_block/HardwareSerial/HardwareSerial.ino
 teensy:avr:teensy40   Snooze/examples/deepsleep/deepSleep_all_wakeups/deepSleep_all_wakeups.ino
 teensy:avr:teensy40   Snooze/examples/reduced_cpu_block/HardwareSerial/HardwareSerial.ino
@@ -111,6 +117,8 @@ teensy:avr:teensy35   Snooze/examples/reduced_cpu_block/simple/simple.ino
 teensy:avr:teensy35   Snooze/examples/reduced_cpu_block/HardwareSerial/HardwareSerial.ino
 teensy:avr:teensy31   Snooze/examples/reduced_cpu_block/simple/simple.ino
 teensy:avr:teensy31   Snooze/examples/reduced_cpu_block/HardwareSerial/HardwareSerial.ino
+teensy:avr:teensyLC   Snooze/examples/reduced_cpu_block/HardwareSerial/HardwareSerial.ino
+teensy:avr:teensy41   Snooze/examples/reduced_cpu_block/HardwareSerial/HardwareSerial.ino
 teensy:avr:teensy31   Snooze/examples/hibernate/sd_datalogger/sd_datalogger.ino
 teensy:avr:teensy30   Snooze/examples/sleep/sleep_usb_serial/sleep_usb_serial.ino
 teensy:avr:teensy30   Snooze/examples/sleep/sleep_all_wakeups/sleep_all_wakeups.ino
@@ -210,6 +218,7 @@ teensy:avr:teensypp2  NativeEthernet/examples/
 # Libraries requiring AVR Timer2, incompatible with Teensy 2.0
 teensy:avr:teensy2    hardware/teensy/avr/libraries/Talkie/
 teensy:avr:teensy2    hardware/teensy/avr/libraries/FrequencyTimer2/
+teensy:avr:teensy2    LowPower/examples/powerDownWakePeriodic/powerDownWakePeriodic.ino
 
 # Libraries incompatible with Teensy LC
 teensy:avr:teensyLC   hardware/teensy/avr/libraries/USBHost_t36/
@@ -247,10 +256,10 @@ teensy:avr:teensy4    SdFat/examples/AvrAdcLogger/AvrAdcLogger.ino
 teensy:avr:teensyMM   SdFat/examples/AvrAdcLogger/AvrAdcLogger.ino
 teensy:avr:teensy3    SdFat/examples/AvrAdcLogger/AvrAdcLogger.ino
 teensy:avr:teensyLC   SdFat/examples/AvrAdcLogger/AvrAdcLogger.ino
-teensy:avr:teensy4    RadioHead/examples/rf24/rf24_lowpower_client/rf24_lowpower_client.pde
-teensy:avr:teensyMM   RadioHead/examples/rf24/rf24_lowpower_client/rf24_lowpower_client.pde
-teensy:avr:teensy3    RadioHead/examples/rf24/rf24_lowpower_client/rf24_lowpower_client.pde
-teensy:avr:teensyLC   RadioHead/examples/rf24/rf24_lowpower_client/rf24_lowpower_client.pde
+teensy:avr:teensy4    RadioHead/examples/rf24/rf24_lowpower_client/rf24_lowpower_client.ino
+teensy:avr:teensyMM   RadioHead/examples/rf24/rf24_lowpower_client/rf24_lowpower_client.ino
+teensy:avr:teensy3    RadioHead/examples/rf24/rf24_lowpower_client/rf24_lowpower_client.ino
+teensy:avr:teensyLC   RadioHead/examples/rf24/rf24_lowpower_client/rf24_lowpower_client.ino
 teensy:avr:teensy4    FrequencyTimer2/examples/
 teensy:avr:teensyMM   FrequencyTimer2/examples/
 
@@ -270,7 +279,9 @@ teensy:avr:teensy30   OctoWS2811/examples/Fire/Fire.ino
 teensy:avr:teensyLC   OctoWS2811/examples/Fire/Fire.ino
 teensy:avr:teensy30   hardware/teensy/avr/libraries/Talkie/
 teensy:avr:teensy30   OctoWS2811/examples/VideoSDcard/VideoSDcard.ino
+teensy:avr:teensyLC   Audio/examples/Analysis/NoteFrequency/NoteFrequency.ino
 teensy:avr:teensy30   Audio/examples/Analysis/NoteFrequency/NoteFrequency.ino
+teensy:avr:teensy31   Audio/examples/Analysis/NoteFrequency/NoteFrequency.ino
 teensy:avr:teensyLC   ADC/examples/synchronizedMeasurements/synchronizedMeasurements.ino
 teensy:avr:teensy30   ADC/examples/synchronizedMeasurements/synchronizedMeasurements.ino
 teensy:avr:teensy30   hardware/teensy/avr/libraries/TimerThree/
@@ -325,6 +336,10 @@ teensy:avr:teensyLC   Audio/examples/Effects/Delay/Delay.ino
 teensy:avr:teensy30   Audio/examples/HardwareTesting/Microphones/SPH0645/SPH0645.ino
 teensy:avr:teensyLC   Audio/examples/HardwareTesting/Microphones/SPH0645/SPH0645.ino
 teensy:avr:teensyLC   Audio/examples/Effects/Bitcrusher/Bitcrusher.ino
+teensy:avr:teensyLC   Audio/examples/HardwareTesting/PassThroughTDM16/PassThroughTDM16.ino
+teensy:avr:teensy30   Audio/examples/HardwareTesting/PassThroughTDM16/PassThroughTDM16.ino
+teensy:avr:teensyLC   Audio/examples/HardwareTesting/WaveformsTDM16/WaveformsTDM16.ino
+teensy:avr:teensy30   Audio/examples/HardwareTesting/WaveformsTDM16/WaveformsTDM16.ino
 teensy:avr:teensyLC   ILI9488_t3/examples/pictureEmbed/pictureEmbed.ino
 teensy:avr:teensy30   ILI9488_t3/examples/pictureEmbed/pictureEmbed.ino
 teensy:avr:teensyLC   Audio/examples/Effects/Chorus/Chorus.ino
@@ -335,7 +350,6 @@ teensy:avr:teensy30   ST7735_t3/examples/uncannyEyes7735/uncannyEyes7735.ino
 teensy:avr:teensyLC   Audio/examples/HardwareTesting/PassThroughAsyncSpdif/
 teensy:avr:teensy30   Audio/examples/HardwareTesting/PassThroughAsyncSpdif/
 teensy:avr:teensy31   Audio/examples/HardwareTesting/PassThroughAsyncSpdif/
-teensy:avr:teensyLC   Audio/examples/Analysis/NoteFrequency/NoteFrequency.ino
 teensy:avr:teensy30   Audio/examples/Analysis/NoteFrequency/NoteFrequency.ino
 teensy:avr:teensyLC   Audio/examples/Synthesis/Wavetable/SimpleWavetable/SimpleWavetable.ino
 teensy:avr:teensy30   Audio/examples/Synthesis/Wavetable/SimpleWavetable/SimpleWavetable.ino
@@ -511,6 +525,7 @@ build.usbtype=USB_SERIAL  Audio/examples/Synthesis/Wavetable/MidiSynth/MidiSynth
 build.usbtype=USB_SERIAL  examples/Teensy/USB_Touchscreen/
 build.usbtype=USB_SERIAL  USBHost_t36/examples/KeyboardForeward/KeyboardForeward.ino
 build.usbtype=USB_SERIAL  USBHost_t36/examples/MIDI/Interface_16x16/Interface_16x16.ino
+build.usbtype=USB_SERIAL  Teensy/USB_Serial/Triple_Serial_Test/Triple_Serial_Test.ino
 
 # requires 1 Mbyte flash
 teensy:avr:teensy35   ST7735_t3/examples/uncannyEyes_async_st7789_240x240/
@@ -538,15 +553,17 @@ SdFat/examples/ExFatUnicodeTest/ExFatUnicodeTest.ino
 SdFat/examples/UserSPIDriver/UserSPIDriver.ino
 SdFat/examples/SoftwareSpi/SoftwareSpi.ino
 RA8875/examples/_Teensy3/_resistiveTouchScreen/touchTest/touchTest.ino
-RadioHead/examples/rf95/rf95_encrypted_client/rf95_encrypted_client.pde
-RadioHead/examples/nrf24/nrf24_encrypted_client/nrf24_encrypted_client.pde
-RadioHead/examples/nrf24/nrf24_encrypted_server/nrf24_encrypted_server.pde
+RadioHead/examples/rf95/rf95_encrypted_client/rf95_encrypted_client.ino
+RadioHead/examples/rf95/rf95_encrypted_server/rf95_encrypted_server.ino
+RadioHead/examples/nrf24/nrf24_encrypted_client/nrf24_encrypted_client.ino
+RadioHead/examples/nrf24/nrf24_encrypted_server/nrf24_encrypted_server.ino
 RA8875/examples/_Teensy3/_resistiveTouchScreen/Calibration/Calibration.ino
 RA8875/examples/_Teensy3/_resistiveTouchScreen/easyPaint/easyPaint.ino
 
 # Processing sketches not meant for Arduino
 openGLCD/bitmaps/utils/glcdMakeBitmap/glcdMakeBitmap.pde
 NXPMotionSense/OrientationVisualiser/OrientationVisualiser.pde
+
 
 # Examples for non-Teensy boards
 UTFT/examples/chipKit/
@@ -556,7 +573,7 @@ RA8875/examples/_esp8266
 RA8875/examples/_Photon
 RA8875/examples/_UNO
 OSC/examples/OSCEsplora/
-OSC/examples/SerialFubarino/SerialFubarino.pde
+OSC/examples/SerialFubarino/SerialFubarino.ino
 TimerOne/examples/ATTiny85/ATTiny85.ino
 Time/examples/TimeArduinoDue/TimeArduinoDue.ino
 Time/examples/TimeNTP_ESP8266WiFi/TimeNTP_ESP8266WiFi.ino
@@ -572,22 +589,22 @@ SdFat/examples/STM32Test/
 
 # Requires other libraries not installed
 OSC/test/OSCBundle_test/OSCBundle_test.ino
-RadioHead/examples/nrf51/nrf51_audio_rx/nrf51_audio_rx.pde
+RadioHead/examples/nrf51/nrf51_audio_rx/nrf51_audio_rx.ino
 NeoGPS/examples/ubloxRate/ubloxRate.ino
 RFM69/Examples/MightyHat/MightyHat.ino
 RFM69/Examples/WeatherNode/WeatherNode.ino
-Adafruit_LED_Backpack/examples/wavface/wavface.pde
+Adafruit_LED_Backpack/examples/wavface/wavface.ino
 U8g2_Arduino/examples/u8x8/ArduboyTest/ArduboyTest.ino
 SdFat/extras/SdFatTestSuite/examples/ATS_SD_Files/ATS_SD_Files.ino
 Adafruit_CC3000/examples/SendTweet/SendTweet.ino
 FastLED/examples/SmartMatrix/SmartMatrix.ino
 SerialFlash/examples/MP3Player/MP3Player.ino
-AccelStepper/examples/AFMotor_ConstantSpeed/AFMotor_ConstantSpeed.pde
-AccelStepper/examples/AFMotor_MultiStepper/AFMotor_MultiStepper.pde
-RadioHead/examples/nrf51/nrf51_audio_tx/nrf51_audio_tx.pde
+AccelStepper/examples/AFMotor_ConstantSpeed/AFMotor_ConstantSpeed.ino
+AccelStepper/examples/AFMotor_MultiStepper/AFMotor_MultiStepper.ino
+RadioHead/examples/nrf51/nrf51_audio_tx/nrf51_audio_tx.ino
 ST7735_t3/examples/ILI_Ada_FontTest4/ILI_Ada_FontTest4.ino
 SdFat/examples/RtcTimestampTest/RtcTimestampTest.ino
-RadioHead/examples/rf95/rf95_encrypted_server/rf95_encrypted_server.pde
+RadioHead/examples/rf95/rf95_encrypted_server/rf95_encrypted_server.ino
 FNET/examples/ASIXEthernet_Test/ASIXEthernet_Test.ino
 ILI9488_t3/examples/CapTouchPaint/CapTouchPaint.ino
 ILI9488_t3/examples/ILI9488_FontTest4/ILI9488_FontTest4.ino
@@ -599,6 +616,6 @@ ILI9488_t3/examples/ILI_GFX_FontTest/ILI_GFX_FontTest.ino
 RA8875/examples/_Teensy3/ILI_Ada_FontTest2/ILI_Ada_FontTest2.ino
 RA8875/examples/_Teensy3/ILI_Ada_FontTest3/ILI_Ada_FontTest3.ino
 RA8875/examples/_Teensy3/ILI_Ada_FontTest4/ILI_Ada_FontTest4.ino
-
+ILI9488_t3/examples/scrollTest_Framebuffer/scrollTest_Framebuffer.ino
 
 
